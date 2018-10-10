@@ -1,0 +1,13 @@
+{
+  "type": "Usage",
+  "timeframe": "MonthToDate",
+  "dataSet": {
+    "granularity": "Daily",
+    "aggregation": {
+      "totalCost": {
+        "name": "PreTaxCost",
+        "function": "Sum"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "Usage",
+  "timeframe": "MonthToDate",
+  "dataSet": {
+    "granularity": "Monthly",
+    "aggregation": {
+      "totalCost": {
+        "name": "PreTaxCost",
+        "function": "Sum"
+      }
+    },
+    "grouping": [
+      {
+        "type": "Dimension",
+        "name": "ResourceLocation"
+      },
+      {
+        "type": "Dimension",
+        "name": "ResourceGroupName"
+      }
+    ]
+  }
+}

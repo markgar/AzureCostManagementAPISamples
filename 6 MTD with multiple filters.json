@@ -1,0 +1,47 @@
+{
+  "type": "Usage",
+  "timeframe": "MonthToDate",
+  "dataSet": {
+    "granularity": "Monthly",
+    "aggregation": {
+      "totalCost": {
+        "name": "PreTaxCost",
+        "function": "Sum"
+      }
+    },
+    "grouping": [
+      {
+        "type": "Dimension",
+        "name": "ServiceName"
+      },
+      {
+        "type": "Dimension",
+        "name": "ResourceLocation"
+      }
+    ],
+    "filter": {
+      "and": [
+        {
+          "dimensions": {
+            "name": "ResourceLocation",
+            "operator": "In",
+            "values": [
+              "us east",
+              "us east 2"
+            ]
+          }
+        },
+        {
+          "dimensions": {
+            "name": "ServiceName",
+            "operator": "In",
+            "values": [
+              "Bandwidth",
+              "Storage"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
